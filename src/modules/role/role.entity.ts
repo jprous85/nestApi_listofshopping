@@ -1,4 +1,4 @@
-import {BaseEntity, Column, Entity, JoinTable, ManyToMany, PrimaryGeneratedColumn} from "typeorm";
+import {BaseEntity, Column, Entity, JoinColumn, JoinTable, ManyToMany, PrimaryGeneratedColumn} from "typeorm";
 import {User} from "../user/user.entity";
 
 @Entity('roles')
@@ -7,7 +7,7 @@ export class Role extends BaseEntity {
     id: number;
 
     @ManyToMany(type => User, user=> user.roles)
-    @JoinTable()
+    @JoinColumn()
     users: User[];
 
     @Column({type: "varchar", unique: true, nullable: false})
