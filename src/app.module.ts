@@ -6,7 +6,7 @@ import {ConfigService} from "./config/config.service";
 import {Configuration} from "./config/config.keys";
 import { DatabaseModule } from './database/database.module';
 import { UserModule } from './modules/user/user.module';
-import { RoleModule } from './role/role.module';
+import { RoleModule } from './modules/role/role.module';
 
 @Module({
   imports: [ConfigModule, DatabaseModule, UserModule, RoleModule],

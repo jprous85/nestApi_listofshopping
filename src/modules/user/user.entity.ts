@@ -12,7 +12,7 @@ export class User extends BaseEntity {
     roles: Role[];
 
     @Column({type: "varchar", unique: true, nullable: false})
-    usename: string;
+    username: string;
 
     @Column({type: "varchar", nullable: false})
     name: string;
